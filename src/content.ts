@@ -208,6 +208,7 @@ export const brands: { name: T; note?: T }[] = [
   { name: { pt: 'Schweppes', en: 'Schweppes' }, note: { pt: 'pago', en: 'paid' } },
   { name: { pt: 'Senzu Coffee Roasters', en: 'Senzu Coffee Roasters' } },
   { name: { pt: 'Transparente Vivo', en: 'Transparente Vivo' } },
+  { name: { pt: 'ABCoffee School', en: 'ABCoffee School' }, note: { pt: 'formação', en: 'training' } },
   { name: { pt: 'Maratona do Porto', en: 'Porto Marathon' }, note: { pt: 'evento', en: 'event' } },
 ]
 
