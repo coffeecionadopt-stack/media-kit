@@ -6,6 +6,7 @@ import { FeaturedCase } from './components/FeaturedCase'
 import { Hero } from './components/Hero'
 import { Last30 } from './components/Last30'
 import { Offer } from './components/Offer'
+import { Press } from './components/Press'
 import { RecentReels } from './components/RecentReels'
 import { TopBar } from './components/TopBar'
 import { LangProvider } from './i18n'
@@ -20,6 +21,7 @@ export default function App() {
         <FeaturedCase />
         <RecentReels />
         <Audience />
+        <Press />
         <About />
         <Offer />
         <BrandsCerts />

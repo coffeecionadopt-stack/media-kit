@@ -2,6 +2,7 @@ import { Fragment } from 'react'
 import { followers, heroFilm, last30, tastingCard } from '../content'
 import { compact } from '../format'
 import { useLang } from '../i18n'
+import { PressBadge } from './Press'
 import { Photo } from './ui'
 
 export function Hero() {
@@ -23,6 +24,7 @@ export function Hero() {
           <p className="who">
             José Correia — {t({ pt: 'café de especialidade, formação SCA', en: 'specialty coffee, SCA-trained' })}
           </p>
+          <PressBadge />
           <p className="pitch">
             {t({
               pt: 'Café de especialidade explicado por quem o faz todos os dias. Conteúdo honesto, técnico e próximo, para uma audiência que quer beber melhor café.',

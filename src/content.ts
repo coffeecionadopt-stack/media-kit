@@ -233,3 +233,30 @@ export const project = {
   quotedEur: 1500,
   setupMinutes: 20,
 }
+
+export type PressItem = {
+  outlet: string
+  outletFull: T
+  url: string
+  date: string
+  headline: T
+  /** A short line of José's own words quoted in the article. */
+  quote: T
+}
+
+export const press: PressItem[] = [
+  {
+    outlet: 'NiT',
+    outletFull: { pt: 'NiT — New in Town', en: 'NiT — New in Town' },
+    url: 'https://www.nit.pt/comida/cafes-e-bares/trabalhou-primeiro-unicornio-portugues-agora-serve-cafes-a-partir-da-mala-do-carro',
+    date: '2026-11-12',
+    headline: {
+      pt: 'Trabalhou no primeiro unicórnio português. Agora, serve cafés a partir da mala do carro',
+      en: "He worked at Portugal's first unicorn. Now he serves coffee from the boot of his car",
+    },
+    quote: {
+      pt: 'Levar o café para, literalmente, qualquer lugar.',
+      en: 'Take coffee literally anywhere.',
+    },
+  },
+]
