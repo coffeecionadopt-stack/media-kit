@@ -2,8 +2,8 @@
 
 Media kit bilingue (PT/EN) do [@coffeecionado.pt](https://www.instagram.com/coffeecionado.pt/): estatísticas de Instagram, audiência, caso em destaque, formatos de colaboração e contactos.
 
-**Online:** https://coffeecionadopt-stack.github.io/media-kit/
-Link direto em inglês: https://coffeecionadopt-stack.github.io/media-kit/#en
+**Online:** https://mediakit.coffeecionado.pt/
+Link direto em inglês: https://mediakit.coffeecionado.pt/#en
 
 Feito com React, TypeScript e Vite. Não há servidor: o site é estático e o GitHub Pages serve-o.
 
@@ -16,7 +16,7 @@ npm install
 npm run dev
 ```
 
-Abre o endereço que aparece no terminal (normalmente http://localhost:5173/media-kit/).
+Abre o endereço que aparece no terminal (normalmente http://localhost:5173/).
 
 ## Atualizar os números
 
