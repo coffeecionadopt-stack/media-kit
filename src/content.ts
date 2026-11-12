@@ -242,6 +242,10 @@ export type PressItem = {
   headline: T
   /** A short line of José's own words quoted in the article. */
   quote: T
+  /** The outlet's own share image (og:image), loaded from their site. */
+  previewImage?: string
+  /** Local image shown if the outlet's image fails to load. */
+  fallbackImage: string
 }
 
 export const press: PressItem[] = [
@@ -258,5 +262,8 @@ export const press: PressItem[] = [
       pt: 'Levar o café para, literalmente, qualquer lugar.',
       en: 'Take coffee literally anywhere.',
     },
+    previewImage:
+      'https://www.nit.pt/wp-content/plugins/madmen-opengraph-image-v2/madmen-opengraph-image.php?post_id=1724439&ts=20261112161102',
+    fallbackImage: 'cart.jpg',
   },
 ]

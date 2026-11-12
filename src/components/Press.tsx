@@ -1,5 +1,26 @@
-import { press } from '../content'
+import { useState } from 'react'
+import { press, type PressItem } from '../content'
+import { img } from '../format'
 import { useLang } from '../i18n'
+
+/** The outlet's share image, falling back to a local photo if it can't load. */
+function PressThumb({ item }: { item: PressItem }) {
+  const [failed, setFailed] = useState(false)
+  const src = !item.previewImage || failed ? img(item.fallbackImage) : item.previewImage
+  return (
+    <span className="press-thumb">
+      <img
+        src={src}
+        alt={item.headline.pt}
+        loading="lazy"
+        referrerPolicy="no-referrer"
+        width={770}
+        height={403}
+        onError={() => setFailed(true)}
+      />
+    </span>
+  )
+}
 
 const formatDate = (iso: string, locale: string) =>
   new Intl.DateTimeFormat(locale, { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(`${iso}T12:00:00`))
@@ -17,11 +38,12 @@ export function Press() {
         <div className="press">
           {press.map((p) => (
             <a className="press-item" key={p.url} href={p.url} target="_blank" rel="noopener">
-              <div className="press-outlet">
-                {p.outlet}
-                <small className="label">{formatDate(p.date, locale)}</small>
-              </div>
+              <PressThumb item={p} />
               <div className="press-body">
+                <div className="press-outlet">
+                  {p.outlet}
+                  <small className="label">{formatDate(p.date, locale)}</small>
+                </div>
                 <p className="press-headline">“{t(p.headline)}”</p>
                 <blockquote className="press-quote">
                   {t(p.quote)} <span className="label">— José Correia</span>
