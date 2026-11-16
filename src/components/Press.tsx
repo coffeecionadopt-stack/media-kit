@@ -37,23 +37,34 @@ export function Press() {
         </div>
         <div className="press">
           {press.map((p) => (
-            <a className="press-item" key={p.url} href={p.url} target="_blank" rel="noopener">
-              <PressThumb item={p} />
+            <article className="press-item" key={p.url}>
+              <a href={p.url} target="_blank" rel="noopener" aria-label={t(p.headline)} style={{ display: 'block' }}>
+                <PressThumb item={p} />
+              </a>
               <div className="press-body">
                 <div className="press-outlet">
                   {p.outlet}
                   <small className="label">{formatDate(p.date, locale)}</small>
                 </div>
-                <p className="press-headline">“{t(p.headline)}”</p>
+                <a className="press-headline-link" href={p.url} target="_blank" rel="noopener">
+                  <p className="press-headline">“{t(p.headline)}”</p>
+                </a>
                 <blockquote className="press-quote">
                   {t(p.quote)} <span className="label">— José Correia</span>
                 </blockquote>
                 {lang === 'en' && <p className="label press-note">Article in Portuguese · headline translated</p>}
-                <span className="watch" style={{ justifySelf: 'start' }}>
-                  {t({ pt: `Ler o artigo na ${p.outlet} ↗`, en: `Read the article on ${p.outlet} ↗` })}
-                </span>
+                <div className="press-actions">
+                  <a className="watch" href={p.url} target="_blank" rel="noopener">
+                    {t({ pt: `Ler o artigo na ${p.outlet} ↗`, en: `Read the article on ${p.outlet} ↗` })}
+                  </a>
+                  {p.social && (
+                    <a className="watch ghost" href={p.social.url} target="_blank" rel="noopener">
+                      {t({ pt: `Ver o post no ${p.social.network} ↗`, en: `See the ${p.social.network} post ↗` })}
+                    </a>
+                  )}
+                </div>
               </div>
-            </a>
+            </article>
           ))}
         </div>
       </div>

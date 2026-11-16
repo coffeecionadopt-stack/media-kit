@@ -222,11 +222,10 @@ export const contact = {
   email: 'coffeecionado.pt@gmail.com',
   links: [
     { label: 'Instagram @coffeecionado.pt', href: 'https://www.instagram.com/coffeecionado.pt/' },
-    { label: 'TikTok @coffeecionadopt', href: 'https://www.tiktok.com/@coffeecionadopt' },
-    { label: 'YouTube @coffeecionado.pt', href: 'https://www.youtube.com/@coffeecionado.pt' },
-    { label: 'coffeecionado.pt', href: 'https://coffeecionado.pt' },
+    { label: 'TikTok @coffeecionado.pt', href: 'https://www.tiktok.com/@coffeecionado.pt' },
+    { label: 'YouTube @coffeecionadopt', href: 'https://www.youtube.com/@coffeecionadopt' },
   ],
-  handles: { instagram: '@coffeecionado.pt', tiktok: '@coffeecionadopt', youtube: '@coffeecionado.pt' },
+  handles: { instagram: '@coffeecionado.pt', tiktok: '@coffeecionado.pt', youtube: '@coffeecionadopt' },
 }
 
 export const project = {
@@ -247,6 +246,8 @@ export type PressItem = {
   previewImage?: string
   /** Local image shown if the outlet's image fails to load. */
   fallbackImage: string
+  /** The outlet's own social post about the article. */
+  social?: { network: string; handle: string; url: string }
 }
 
 export const press: PressItem[] = [
@@ -266,5 +267,6 @@ export const press: PressItem[] = [
     previewImage:
       'https://www.nit.pt/wp-content/plugins/madmen-opengraph-image-v2/madmen-opengraph-image.php?post_id=1724439&ts=20261112161102',
     fallbackImage: 'cart.jpg',
+    social: { network: 'Instagram', handle: '@revista_nit', url: 'https://www.instagram.com/revista_nit/p/DfxtC85FAOl/' },
   },
 ]
