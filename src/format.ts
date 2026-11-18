@@ -1,14 +1,20 @@
 /**
  * Number formatting in the viewer's language.
- * pt-PT: 499 mil · 1 M · 6,4 mil · 5,0%
- * en:    499K    · 1M  · 6.4K    · 5.0%
+ * pt-PT: 499 mil · 1,1 M · 14,9 mil · 5,0%
+ * en:    499K    · 1.1M  · 14.9K    · 5.0%
  */
 
-/** Compact number; whole units from 10 000 up, one decimal below. */
+/** One decimal while the shown number is below 100 (1,1 M · 14,9 mil), none from 100 up (561 mil). */
+const compactDigits = (n: number) => {
+  const shown = n >= 1_000_000 ? n / 1_000_000 : n >= 1_000 ? n / 1_000 : n
+  return shown < 100 ? 1 : 0
+}
+
+/** Compact number in the viewer's language. */
 export function compact(n: number, locale: string): string {
   return new Intl.NumberFormat(locale, {
     notation: 'compact',
-    maximumFractionDigits: n >= 10_000 ? 0 : 1,
+    maximumFractionDigits: compactDigits(n),
   }).format(n)
 }
 
@@ -16,7 +22,7 @@ export function compact(n: number, locale: string): string {
 export function compactParts(n: number, locale: string): { value: string; unit: string } {
   const parts = new Intl.NumberFormat(locale, {
     notation: 'compact',
-    maximumFractionDigits: n >= 10_000 ? 0 : 1,
+    maximumFractionDigits: compactDigits(n),
   }).formatToParts(n)
   const unit = parts.filter((p) => p.type === 'compact').map((p) => p.value).join('')
   const value = parts

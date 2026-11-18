@@ -9,26 +9,26 @@ import type { T } from './i18n'
 const IG = 'https://www.instagram.com/coffeecionado.pt/reel/'
 
 export const period = {
-  label: { pt: '12 out – 11 nov 2026', en: '12 Oct – 11 Nov 2026' } as T,
-  exportedOn: '12/11/2026',
+  label: { pt: '18 out – 17 nov 2026', en: '18 Oct – 17 Nov 2026' } as T,
+  exportedOn: '18/11/2026',
 }
 
 export const followers = {
-  instagram: 13_092,
+  instagram: 14_879,
   tiktok: 1_600,
   youtube: 246,
 }
 
 /** Instagram account totals for the period (Edits export). */
 export const last30 = {
-  views: 1_000_000,
-  accountsReached: 499_000,
-  reels: 13,
-  likes: 36_000,
-  comments: 1_100,
-  reposts: 483,
-  shares: 10_000,
-  saves: 2_500,
+  views: 1_100_000,
+  accountsReached: 561_000,
+  reels: 10,
+  likes: 40_000,
+  comments: 1_200,
+  reposts: 554,
+  shares: 11_000,
+  saves: 2_700,
 }
 
 export type Reel = {
@@ -56,14 +56,14 @@ export const reels: Reel[] = [
     title: { pt: 'Coffee cart na mala do carro', en: 'Coffee cart in the car boot' },
     published: '2026-11-07',
     durationSec: 48,
-    views: 581_000,
-    accounts: 416_000,
-    avgWatchSec: 25.71,
-    likes: 22_000,
-    comments: 661,
-    reposts: 315,
-    shares: 6_400,
-    saves: 1_200,
+    views: 672_000,
+    accounts: 485_000,
+    avgWatchSec: 25.61,
+    likes: 25_000,
+    comments: 707,
+    reposts: 362,
+    shares: 7_200,
+    saves: 1_400,
   },
   {
     id: 'marathon',
@@ -103,29 +103,29 @@ export const reels: Reel[] = [
 export const featuredReelId = 'cart'
 
 export const audience = {
-  gender: { men: 69.5, women: 30.5 },
+  gender: { men: 67.0, women: 33.0 },
   ages: [
-    { range: '13–17', pct: 0.2 },
-    { range: '18–24', pct: 2.7 },
-    { range: '25–34', pct: 31.6 },
-    { range: '35–44', pct: 40.5 },
-    { range: '45–54', pct: 19.6 },
-    { range: '55–64', pct: 4.4 },
-    { range: '65+', pct: 1.1 },
+    { range: '13–17', pct: 0.1 },
+    { range: '18–24', pct: 2.4 },
+    { range: '25–34', pct: 29.9 },
+    { range: '35–44', pct: 40.6 },
+    { range: '45–54', pct: 20.6 },
+    { range: '55–64', pct: 5.1 },
+    { range: '65+', pct: 1.2 },
   ],
   countries: [
-    { name: { pt: 'Portugal', en: 'Portugal' }, pct: 75.6 },
-    { name: { pt: 'Brasil', en: 'Brazil' }, pct: 6.8 },
-    { name: { pt: 'Espanha', en: 'Spain' }, pct: 2.2 },
-    { name: { pt: 'Suíça', en: 'Switzerland' }, pct: 1.9 },
-    { name: { pt: 'Reino Unido', en: 'United Kingdom' }, pct: 1.8 },
+    { name: { pt: 'Portugal', en: 'Portugal' }, pct: 77.6 },
+    { name: { pt: 'Brasil', en: 'Brazil' }, pct: 6.2 },
+    { name: { pt: 'Espanha', en: 'Spain' }, pct: 2.0 },
+    { name: { pt: 'Suíça', en: 'Switzerland' }, pct: 1.8 },
+    { name: { pt: 'França', en: 'France' }, pct: 1.7 },
   ],
   cities: [
-    { name: { pt: 'Porto', en: 'Porto' }, pct: 11.4, greaterPorto: true },
-    { name: { pt: 'Lisboa', en: 'Lisbon' }, pct: 9.1, greaterPorto: false },
-    { name: { pt: 'Matosinhos', en: 'Matosinhos' }, pct: 7.6, greaterPorto: true },
-    { name: { pt: 'Vila Nova de Gaia', en: 'Vila Nova de Gaia' }, pct: 6.7, greaterPorto: true },
-    { name: { pt: 'Gondomar', en: 'Gondomar' }, pct: 5.7, greaterPorto: true },
+    { name: { pt: 'Porto', en: 'Porto' }, pct: 10.9, greaterPorto: true },
+    { name: { pt: 'Lisboa', en: 'Lisbon' }, pct: 9.5, greaterPorto: false },
+    { name: { pt: 'Matosinhos', en: 'Matosinhos' }, pct: 7.5, greaterPorto: true },
+    { name: { pt: 'Vila Nova de Gaia', en: 'Vila Nova de Gaia' }, pct: 6.6, greaterPorto: true },
+    { name: { pt: 'Gondomar', en: 'Gondomar' }, pct: 5.4, greaterPorto: true },
   ],
 }
 
